@@ -1,0 +1,86 @@
+<%= form_with(model: dizimo, remote: true, id: dizimo.id) do |form| %>
+ 
+  <div class="modal-body">
+        <div class="field hidden">
+          <%= form.label :ano %>
+          <%= form.text_field :ano, id: :dizimo_ano %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :jan, "Janeiro" %>
+          <%= form.check_box :jan, id: :dizimo_jan %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :fev, "Fevereiro" %>
+          <%= form.check_box :fev, id: :dizimo_fev %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :mar, "Março" %>
+          <%= form.check_box :mar, id: :dizimo_mar %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :abr, "Abril" %>
+          <%= form.check_box :abr, id: :dizimo_abr %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :mai, "Maio" %>
+          <%= form.check_box :mai, id: :dizimo_mai %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :jun, "Junho" %>
+          <%= form.check_box :jun, id: :dizimo_jun %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :jul, "Julho" %>
+          <%= form.check_box :jul, id: :dizimo_jul %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :ago, "Agosto" %>
+          <%= form.check_box :ago, id: :dizimo_ago %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :set, "Setembro" %>
+          <%= form.check_box :set, id: :dizimo_set %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :out, "Outubro" %>
+          <%= form.check_box :out, id: :dizimo_out %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :nov, "Novembro" %>
+          <%= form.check_box :nov, id: :dizimo_nov %>
+        </div>
+
+        <div class="field checkbox">
+          <%= form.label :des, "Dezembro" %>
+          <%= form.check_box :des, id: :dizimo_des %>
+        </div>
+
+        <div class="field hidden">
+          <%= form.label :membro_id %>
+          <%= form.text_field :membro_id, id: :dizimo_membro_id %>
+        </div>
+  </div>
+      
+  <div class="modal-footer">
+      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+          <span class="glyphicon glyphicon-remove"></span> Cancelar
+      </button>
+      <button type="submit" name="commit" class="btn btn-primary btn-default pull-left">
+          <span class="glyphicon glyphicon-remove"></span> Salvar
+      </button>     
+  </div>
+
+
+  
+<% end %>

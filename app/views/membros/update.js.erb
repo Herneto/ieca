@@ -1,0 +1,8 @@
+$(".esconder").modal("hide")
+
+<% unless action_name == "index" %>
+    $(".dados").hide('slow', function() {
+        $(".dados").remove();
+        $(".membro").append('<%= j render 'membros/mostrar' %> ');    
+    });
+<% end %>	

@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  pai: MyString
+  mae: MyString
+  residencia: MyString
+  nacionalidade: MyString
+  naturalidade: MyString
+  provincia: MyString
+  nascimento: 2018-04-22 21:25:42
+  sexo: false
+  estado_civil: MyString
+  peso: MyString
+  altura: MyString
+  data_casamento: 2018-04-22 21:25:42
+  agregado: MyText
+  localbaptismo: MyString
+  data_batismo: 2018-04-22 21:25:42
+  localconfirmacao: MyString
+  data_confirmacao: 2018-04-22 21:25:42
+  categoriareligiosa: MyString
+  cargolideranca: MyString
+
+two:
+  nome: MyString
+  pai: MyString
+  mae: MyString
+  residencia: MyString
+  nacionalidade: MyString
+  naturalidade: MyString
+  provincia: MyString
+  nascimento: 2018-04-22 21:25:42
+  sexo: false
+  estado_civil: MyString
+  peso: MyString
+  altura: MyString
+  data_casamento: 2018-04-22 21:25:42
+  agregado: MyText
+  localbaptismo: MyString
+  data_batismo: 2018-04-22 21:25:42
+  localconfirmacao: MyString
+  data_confirmacao: 2018-04-22 21:25:42
+  categoriareligiosa: MyString
+  cargolideranca: MyString

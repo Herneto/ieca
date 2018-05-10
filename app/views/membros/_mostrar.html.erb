@@ -1,0 +1,89 @@
+<div class="dados">
+
+<p class="text-center" style="font-size: 24px; margin-top: 10px;">
+    <%= @membro.nome %>
+</p>
+<p class="text-center" style="font-size: 18px; margin-top: 10px;">
+    <button class="btn" data-toggle="modal" data-target="#novo<%= @membro.id %>">Editar</button> 
+</p>
+
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Dados Pessoais</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+          <ul class="list-group">
+          <li class="list-group-item"><strong>Pai:</strong><%= @membro.pai %></li>
+          <li class="list-group-item"><strong>Mãe:</strong> <%= @membro.mae %></li>
+          <li class="list-group-item"> <strong>Residencia:</strong>      <%= @membro.residencia %></li>
+          <li class="list-group-item"> <strong>Nacionalidade:</strong>      <%= @membro.nacionalidade %></li>
+          <li class="list-group-item"><strong>Naturalidade:</strong>     <%= @membro.naturalidade %></li>
+          <li class="list-group-item"><strong>Província:</strong>       <%= @membro.provincia %></li>
+          <li class="list-group-item"><strong>Nascimento:</strong>       <%=  @membro.nascimento.mday %>/<%=  @membro.nascimento.mon %>/<%= @membro.nascimento.year %></li>
+          <li class="list-group-item"> <strong>Sexo:</strong>       <%= @membro.sexo %></li>
+          <li class="list-group-item"><strong>Estado Civil:</strong>         <%= @membro.estado_civil %></li>
+          <li class="list-group-item"><strong>Peso:</strong>    <%= @membro.peso %></li>
+          <li class="list-group-item"><strong>Altura:</strong>     <%= @membro.altura %></li>
+          <li class="list-group-item"><strong>Data Casamento:</strong>        <%= @membro.data_casamento.mday %>/<%= @membro.data_casamento.mon %>/<%= @membro.data_casamento.year %></li>
+          <li class="list-group-item"> <strong>Agregado:</strong>      <%= @membro.agregado %></li>
+      </ul> 
+
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Dados Relacionados à Igreja</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+          <ul class="list-group">
+              <li class="list-group-item"><strong>Local do Baptismo:</strong>      <%= @membro.localbaptismo %></li>
+              <li class="list-group-item"><strong>Data de Batismo:</strong>    <%= @membro.data_batismo.mday %>/<%= @membro.data_batismo.mon %>/<%= @membro.data_batismo.year %></li>
+              <li class="list-group-item"><strong>Local de Confirmação:</strong>    <%= @membro.localconfirmacao %></li>
+              <li class="list-group-item"><strong>Data Confirmação:</strong>      <%=  @membro.data_confirmacao.mday %>/<%=  @membro.data_confirmacao.mon %>/<%=  @membro.data_confirmacao.year %></li>
+              <li class="list-group-item"><strong>Categoria Religiosa:</strong>      <%= @membro.categoriareligiosa %></li>
+              <li class="list-group-item"><strong>Cargo de Liderança:</strong>   <%= @membro.cargolideranca %></li>
+          </ul> 
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Dízimos</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+        <div class="dizimos">
+          <%= render @dizimos %>
+        </div>
+        <button class="btn" data-toggle="modal" data-target="#mais">Adicionar Ano</button>        
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="mais" class="modal fade esconder" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <%= render 'dizimos/formmm', dizimo: @dizimo %>
+    </div>
+
+  </div>
+</div>
+
+
+<%= render 'membros/formm', membro: @membro %>
+</div>

@@ -1,0 +1,117 @@
+<%= form_with(model: membro, local: true) do |form| %>
+  <% if membro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(membro.errors.count, "error") %> prohibited this membro from being saved:</h2>
+
+      <ul>
+      <% membro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :membro_nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pai %>
+    <%= form.text_field :pai, id: :membro_pai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mae %>
+    <%= form.text_field :mae, id: :membro_mae %>
+  </div>
+
+  <div class="field">
+    <%= form.label :residencia %>
+    <%= form.text_field :residencia, id: :membro_residencia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nacionalidade %>
+    <%= form.text_field :nacionalidade, id: :membro_nacionalidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :naturalidade %>
+    <%= form.text_field :naturalidade, id: :membro_naturalidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :provincia %>
+    <%= form.text_field :provincia, id: :membro_provincia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nascimento %>
+    <%= form.date_select :nascimento, id: :membro_nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sexo %>
+    <%= form.check_box :sexo, id: :membro_sexo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_civil %>
+    <%= form.text_field :estado_civil, id: :membro_estado_civil %>
+  </div>
+
+  <div class="field">
+    <%= form.label :peso %>
+    <%= form.text_field :peso, id: :membro_peso %>
+  </div>
+
+  <div class="field">
+    <%= form.label :altura %>
+    <%= form.text_field :altura, id: :membro_altura %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_casamento %>
+    <%= form.date_select :data_casamento, id: :membro_data_casamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agregado %>
+    <%= form.text_area :agregado, id: :membro_agregado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localbaptismo %>
+    <%= form.text_field :localbaptismo, id: :membro_localbaptismo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_batismo %>
+    <%= form.date_select :data_batismo, id: :membro_data_batismo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :localconfirmacao %>
+    <%= form.text_field :localconfirmacao, id: :membro_localconfirmacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_confirmacao %>
+    <%= form.date_select :data_confirmacao, id: :membro_data_confirmacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoriareligiosa %>
+    <%= form.text_field :categoriareligiosa, id: :membro_categoriareligiosa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cargolideranca %>
+    <%= form.text_field :cargolideranca, id: :membro_cargolideranca %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

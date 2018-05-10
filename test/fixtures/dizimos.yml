@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ano: MyString
+  jan: false
+  fev: false
+  mar: false
+  abr: false
+  mai: false
+  jun: false
+  jul: false
+  ago: false
+  set: false
+  out: false
+  nov: false
+  des: false
+  membro: one
+
+two:
+  ano: MyString
+  jan: false
+  fev: false
+  mar: false
+  abr: false
+  mai: false
+  jun: false
+  jul: false
+  ago: false
+  set: false
+  out: false
+  nov: false
+  des: false
+  membro: two

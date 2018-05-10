@@ -1,0 +1,87 @@
+<%= form_with(model: dizimo, local: true) do |form| %>
+  <% if dizimo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dizimo.errors.count, "error") %> prohibited this dizimo from being saved:</h2>
+
+      <ul>
+      <% dizimo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ano %>
+    <%= form.text_field :ano, id: :dizimo_ano %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jan %>
+    <%= form.check_box :jan, id: :dizimo_jan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fev %>
+    <%= form.check_box :fev, id: :dizimo_fev %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mar %>
+    <%= form.check_box :mar, id: :dizimo_mar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :abr %>
+    <%= form.check_box :abr, id: :dizimo_abr %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mai %>
+    <%= form.check_box :mai, id: :dizimo_mai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jun %>
+    <%= form.check_box :jun, id: :dizimo_jun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :jul %>
+    <%= form.check_box :jul, id: :dizimo_jul %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ago %>
+    <%= form.check_box :ago, id: :dizimo_ago %>
+  </div>
+
+  <div class="field">
+    <%= form.label :set %>
+    <%= form.check_box :set, id: :dizimo_set %>
+  </div>
+
+  <div class="field">
+    <%= form.label :out %>
+    <%= form.check_box :out, id: :dizimo_out %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nov %>
+    <%= form.check_box :nov, id: :dizimo_nov %>
+  </div>
+
+  <div class="field">
+    <%= form.label :des %>
+    <%= form.check_box :des, id: :dizimo_des %>
+  </div>
+
+  <div class="field">
+    <%= form.label :membro_id %>
+    <%= form.text_field :membro_id, id: :dizimo_membro_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

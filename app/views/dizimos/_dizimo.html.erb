@@ -1,0 +1,17 @@
+<button class="btn" data-toggle="modal" data-target="#modal_<%= dizimo.ano %>"><%= dizimo.ano %></button> 
+
+
+  <!-- Modal -->
+<div class="modal fade esconder" id="modal_<%= dizimo.ano %>" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4><span class="glyphicon glyphicon-lock"></span> Dizimos de <%= dizimo.ano %> </h4>
+      </div>
+      <%= render 'dizimos/formm', dizimo: dizimo %>
+    </div>
+  </div>
+</div>

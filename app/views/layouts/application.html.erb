@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IECA - Controle Membros</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+          <div class="wrap">
+              <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/">IECA - Membros</a>
+              </div>
+              <ul class="nav navbar-nav navbar-left">
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right">   
+                <% if usuario_signed_in? %>
+                    <li><a href="/membros">Membros</a></li>
+                    <li><a href="/configuracao">Configurações</a></li>
+                    <li><%= link_to "Sair", destroy_usuario_session_path, method: :delete %></li>
+                <% else %>     
+                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>Entrar</a></li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>

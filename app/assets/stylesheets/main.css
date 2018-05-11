@@ -7,3 +7,20 @@
 .main .btn {
    color: #fff !important; 
 }
+
+/* Create a medium height at 40px */
+.navbar-md {min-height:80px}
+.navbar-md .navbar-brand,
+.navbar-md .navbar-nav>li>a {padding-top:30px; padding-bottom:30px}
+.navbar-md .navbar-brand {height: 80px}
+.navbar-md .navbar-toggle {margin: 12px 24px 12px 0px; padding: 12px 14px 12px 20px;}
+.navbar-md .navbar-toggle .icon-bar {width: 38px;}
+
+
+/* Create a small height at 30px */
+.navbar-sm {min-height:30px}
+.navbar-sm .navbar-brand,
+.navbar-sm .navbar-nav>li>a {padding-top:5px; padding-bottom:5px}
+.navbar-sm .navbar-brand {height: 30px}
+.navbar-sm .navbar-toggle {margin: 3px 9px 3px 0px; padding: 4px 4px 4px 4px;}
+.navbar-sm .navbar-toggle .icon-bar {width: 16px;}

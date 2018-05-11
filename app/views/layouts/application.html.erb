@@ -8,24 +8,23 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default" style="margin-bottom: 0px;">
+    <nav class="navbar navbar-default navbar-md" style="margin-bottom: 0px;">
           <div class="wrap">
               <div class="container-fluid">
-              <div class="navbar-header">
-                <a class="navbar-brand" href="/">IECA - Membros</a>
-              </div>
-              <ul class="nav navbar-nav navbar-left">
-                
-              </ul>
-              <ul class="nav navbar-nav navbar-right">   
-                <% if usuario_signed_in? %>
-                    <li><a href="/membros">Membros</a></li>
-                    <li><a href="/configuracao">Configurações</a></li>
-                    <li><%= link_to "Sair", destroy_usuario_session_path, method: :delete %></li>
-                <% else %>     
-                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>Entrar</a></li>
-                <% end %>
-              </ul>
+                  <div class="navbar-header text-center">
+                    <a class="navbar-brand " style="padding-top: 5px;" href="/"> <img src="<%= image_path("logo.png") %>" style="height: 60px;"/> I.E.C.A - Membros</a>
+                  </div>
+                <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    <% if usuario_signed_in? %>
+                      <li><a href="/membros">Membros</a></li>
+                      <li><a href="/configuracao">Configurações</a></li>
+                      <li><%= link_to "Sair", destroy_usuario_session_path, method: :delete %></li>
+                    <% else %>
+                      <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span>Entrar</a></li>
+                    <% end %>
+                  </ul>
+                </div>
             </div>
           </div>
     </nav>

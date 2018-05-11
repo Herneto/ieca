@@ -20,6 +20,8 @@
           <ul class="list-group">
           <li class="list-group-item"><strong>Pai:</strong><%= @membro.pai %></li>
           <li class="list-group-item"><strong>Mãe:</strong> <%= @membro.mae %></li>
+          <li class="list-group-item"><strong>BI:</strong> <%= @membro.bi %></li>
+
           <li class="list-group-item"> <strong>Residencia:</strong>      <%= @membro.residencia %></li>
           <li class="list-group-item"> <strong>Nacionalidade:</strong>      <%= @membro.nacionalidade %></li>
           <li class="list-group-item"><strong>Naturalidade:</strong>     <%= @membro.naturalidade %></li>
@@ -29,8 +31,8 @@
           <li class="list-group-item"><strong>Estado Civil:</strong>         <%= @membro.estado_civil %></li>
           <li class="list-group-item"><strong>Peso:</strong>    <%= @membro.peso %></li>
           <li class="list-group-item"><strong>Altura:</strong>     <%= @membro.altura %></li>
-          <li class="list-group-item"><strong>Data Casamento:</strong>        <%= @membro.data_casamento.mday %>/<%= @membro.data_casamento.mon %>/<%= @membro.data_casamento.year %></li>
-          <li class="list-group-item"> <strong>Agregado:</strong>      <%= @membro.agregado %></li>
+          <li class="list-group-item"><strong>Data do Casamento:</strong>        <%= @membro.data_casamento.mday %>/<%= @membro.data_casamento.mon %>/<%= @membro.data_casamento.year %></li>
+          <li class="list-group-item"> <strong>Agregado Familiar:</strong>      <%= @membro.agregado %></li>
       </ul> 
 
     </div>
@@ -50,6 +52,7 @@
               <li class="list-group-item"><strong>Data Confirmação:</strong>      <%=  @membro.data_confirmacao.mday %>/<%=  @membro.data_confirmacao.mon %>/<%=  @membro.data_confirmacao.year %></li>
               <li class="list-group-item"><strong>Categoria Religiosa:</strong>      <%= @membro.categoriareligiosa %></li>
               <li class="list-group-item"><strong>Cargo de Liderança:</strong>   <%= @membro.cargolideranca %></li>
+            <li class="list-group-item"><strong>Sociedade:</strong>   <%= @membro.sociedade %></li>
           </ul> 
     </div>
   </div>

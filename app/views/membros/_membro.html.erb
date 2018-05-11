@@ -2,7 +2,7 @@
     <td><%= membro.nome %></td>
     <td><%= membro.provincia %></td>
     <td><%= membro.nascimento.mday %>/<%= membro.nascimento.mon %>/<%= membro.nascimento.year %></td>
-    <td><%= membro.sexo %></td>
+    <td><% if membro.sexo %> Homem <% else %> Mulher<% end %></td>
     <td><%= membro.estado_civil %></td>
     <td><%= membro.categoriareligiosa %></td>
     <td><%= membro.cargolideranca %></td>

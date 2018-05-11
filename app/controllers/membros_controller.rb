@@ -83,6 +83,6 @@ class MembrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def membro_params
-      params.require(:membro).permit(:nome, :pai, :mae, :residencia, :nacionalidade, :naturalidade, :provincia, :nascimento, :sexo, :estado_civil, :peso, :altura, :data_casamento, :agregado, :localbaptismo, :data_batismo, :localconfirmacao, :data_confirmacao, :categoriareligiosa, :cargolideranca)
+      params.require(:membro).permit(:nome, :pai, :mae, :residencia, :nacionalidade, :naturalidade, :provincia, :nascimento, :sexo, :estado_civil, :peso, :altura, :data_casamento, :agregado, :localbaptismo, :data_batismo, :localconfirmacao, :data_confirmacao, :categoriareligiosa, :cargolideranca, :sociedade, :bi, :casado)
     end
 end

@@ -1,158 +1,183 @@
+<%= form_with(model: membro, remote: true) do |form| %>
 
-        <%= form_with(model: membro, remote: true) do |form| %>
-        
-        <!-- Modal -->
-        <div id="novo<%= membro.id %>" class="modal fade esconder" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title"> <% if membro.id %> Editar Membro <% else %> Adicionar Membro<% end %></h4>
-                </div>
-                <div class="modal-body">
-                        <% if membro.errors.any? %>
-                          <div id="error_explanation">
-                            <h2><%= pluralize(membro.errors.count, "error") %> prohibited this membro from being saved:</h2>
+  <!-- Modal -->
+  <div id="novo<%= membro.id %>" class="modal fade esconder" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"> <% if membro.id %> Editar Membro <% else %> Adicionar Membro<% end %></h4>
+        </div>
+        <div class="modal-body">
+          <% if membro.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(membro.errors.count, "error") %> prohibited this membro from being saved:</h2>
 
-                            <ul>
-                            <% membro.errors.full_messages.each do |message| %>
-                              <li><%= message %></li>
-                            <% end %>
-                            </ul>
-                          </div>
-                        <% end %>
+              <ul>
+                <% membro.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
 
 
-                                <div class="form-group">
-                              <%= form.label :nome %>
-                              <%= form.text_field :nome, id: :membro_nome, class: "form-control input-lg"%>
-                            </div>
+          <div class="form-group">
+            <%= form.label :nome %>
+            <%= form.text_field :nome, id: :membro_nome, class: "form-control input-lg"%>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :pai %>
-                              <%= form.text_field :pai, id: :membro_pai, class: "form-control input-lg"%>
-                            </div>
+          <div class="form-group">
+            <%= form.label :pai %>
+            <%= form.text_field :pai, id: :membro_pai, class: "form-control input-lg"%>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :mae %>
-                              <%= form.text_field :mae, id: :membro_mae, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <label>Mãe</label>
+            <%= form.text_field :mae, id: :membro_mae, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :residencia %>
-                              <%= form.text_field :residencia, id: :membro_residencia, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <label>BI</label>
+            <%= form.text_field :bi, id: :bi, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :nacionalidade %>
-                              <%= form.text_field :nacionalidade, id: :membro_nacionalidade, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <label>Residência</label>
+            <%= form.text_field :residencia, id: :membro_residencia, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :naturalidade %>
-                              <%= form.text_field :naturalidade, id: :membro_naturalidade, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <%= form.label :nacionalidade %>
+            <%= form.text_field :nacionalidade, id: :membro_nacionalidade, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :provincia %>
-                              <%= form.text_field :provincia, id: :membro_provincia, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <%= form.label :naturalidade %>
+            <%= form.text_field :naturalidade, id: :membro_naturalidade, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :nascimento %>
-                              <%= form.date_select :nascimento, id: :membro_nascimento, class: "form-control input-lg"%>
-                            </div>
+          <div class="form-group">
+            <label>Província</label>
+            <%= form.text_field :provincia, id: :membro_provincia, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :sexo %>
-                              <%= form.check_box :sexo, id: :membro_sexo %>
-                            </div>
+          <div class="form-group">
+            <%= form.label :nascimento %>
+            <%= form.date_select :nascimento, id: :membro_nascimento, class: "form-control input-lg"%>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :estado_civil %>
-                              <%= form.text_field :estado_civil, id: :membro_estado_civil, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <label>Homem?</label>
+            <%= form.check_box :sexo, id: :membro_sexo %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :peso %>
-                              <%= form.text_field :peso, id: :membro_peso , class: "form-control input-lg"%>
-                            </div>
+          <div class="form-group">
+            <label>Estado Civil</label>
+            <select id="membro_estado_civil" name="membro[estado_civil]" class="form-control">
+              <option value="Casado/a">Casado/a</option>
+              <option value="Solteiro/a">Solteiro/a</option>
+              <option value="Viúva">Viúva</option>
+            </select>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :altura %>
-                              <%= form.text_field :altura, id: :membro_altura, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <%= form.label :peso %>
+            <%= form.text_field :peso, id: :membro_peso , class: "form-control input-lg"%>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :data_casamento %>
-                              <%= form.date_select :data_casamento, id: :membro_data_casamento, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <%= form.label :altura %>
+            <%= form.text_field :altura, id: :membro_altura, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :agregado %>
-                              <%= form.text_area :agregado, id: :membro_agregado, class: "form-control input-lg" %>
-                            </div>
 
-                            <div class="form-group">
-                              <%= form.label :localbaptismo %>
-                              <%= form.text_field :localbaptismo, id: :membro_localbaptismo, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <label>É Casado?</label>
+            <%= form.check_box :casado, id: :membro_casado, :"data-toggle" => "collapse", :"data-target" => "#demo" %>
 
-                            <div class="form-group">
-                              <%= form.label :data_batismo %>
-                              <%= form.date_select :data_batismo, id: :membro_data_batismo, class: "form-control input-lg" %>
-                            </div>
+            <div id="demo" class="collapse">
+                <label>Data de Casamento</label>
+                <%= form.date_select :data_casamento, id: :membro_data_casamento, class: "form-control input-lg" %>
+            </div>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :localconfirmacao %>
-                              <%= form.text_field :localconfirmacao, id: :membro_localconfirmacao , class: "form-control input-lg"%>
-                            </div>
+          <div class="form-group">
+            <label>Agregado Familiar</label>
+            <%= form.text_area :agregado, id: :membro_agregado, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :data_confirmacao %>
-                              <%= form.date_select :data_confirmacao, id: :membro_data_confirmacao, class: "form-control input-lg" %>
-                            </div>
+          <div class="form-group">
+            <label>Local de Baptismo</label>
+            <%= form.text_field :localbaptismo, id: :membro_localbaptismo, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :categoriareligiosa %>
-                              <%= form.text_field :categoriareligiosa, id: :membro_categoriareligiosa, class: "form-control input-lg" %>
-                              <select id="membro_categoriareligiosa" name="membro[categoriareligiosa]" class="form-control">
-                                  <option value="pastor">MEMBRO EM PLENA COMUNHÃO</option>
-                                  <option value="diacono">MEMBRO CATECÚMENO</option>
-                                  <option value="diacono">MEMBRO OUVINTE</option>                              
-                                  <option value="diacono">MEMBRO SUSPENSO</option>                              
-                              </select>
-                            </div>
+          <div class="form-group">
+            <label>Data de Baptismo</label>
+            <%= form.date_select :data_batismo, id: :membro_data_batismo, class: "form-control input-lg" %>
+          </div>
 
-                            <div class="form-group">
-                              <%= form.label :cargolideranca %>
-                              <select id="membro_cargolideranca" name="membro[cargolideranca]"class="form-control">
-                                  <option value="pastor">PASTOR/A</option>
-                                  <option value="diacono">DIÁCONO</option>
-                                  <option value="diacono">DIÁCONISA</option>
-                                  <option value="evangelista">EVANGELISTA</option>
-                                  <option value="catequista">CATEQUISTA</option>
-                                  <option value="diretor">DIRETOR/A</option>
-                                  <option value="secretario">SECRETÁRIO/A</option>
-                                  <option value="tesoureiro">TESOUREIRO/A</option>
-                                  <option value="conselheiro">CONSELHEIRO/A</option>                              
-                              </select>
-                            </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
-                        <span class="glyphicon glyphicon-remove"></span> Cancelar
-                    </button>
-                    <button type="submit" name="commit" class="btn btn-primary btn-default pull-left">
-                        <span class="glyphicon glyphicon-remove"></span> Salvar
-                    </button>    
-                </div> 
-            </div> 
-          </div> 
-        </div> 
+          <div class="form-group">
+            <label>Local da Confirmação</label>
+            <%= form.text_field :localconfirmacao, id: :membro_localconfirmacao , class: "form-control input-lg"%>
+          </div>
 
-      <% end %>
+          <div class="form-group">
+            <label>Data da Confirmação</label>
+            <%= form.date_select :data_confirmacao, id: :membro_data_confirmacao, class: "form-control input-lg" %>
+          </div>
+
+          <div class="form-group">
+            <label>Categoria Religiosa</label>
+            <select id="membro_categoriareligiosa" name="membro[categoriareligiosa]" class="form-control">
+              <option value="MEMBRO EM PLENA COMUNHÃO">MEMBRO EM PLENA COMUNHÃO</option>
+              <option value="MEMBRO CATECÚMENO">MEMBRO CATECÚMENO</option>
+              <option value="MEMBRO OUVINTE">MEMBRO OUVINTE</option>
+              <option value="MEMBRO SUSPENSO">MEMBRO SUSPENSO</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <%= form.label :sociedade %>
+            <select id="membro_sociedade" name="membro[sociedade]" class="form-control">
+              <option value="Criança">Criança</option>
+              <option value="Jovens">Jovens</option>
+              <option value="Média">Média</option>
+              <option value="Homens">Homens</option>
+              <option value="Mulheres">Mulheres</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Cargo de Liderança</label>
+            <select id="membro_cargolideranca" name="membro[cargolideranca]"class="form-control">
+              <option value="PASTOR/A">PASTOR/A</option>
+              <option value="DIÁCONO">DIÁCONO</option>
+              <option value="DIÁCONISA">DIÁCONISA</option>
+              <option value="EVANGELISTA">EVANGELISTA</option>
+              <option value="CATEQUISTA">CATEQUISTA</option>
+              <option value="DIRETOR/A">DIRETOR/A</option>
+              <option value="SECRETÁRIO/A">SECRETÁRIO/A</option>
+              <option value="TESOUREIRO/A">TESOUREIRO/A</option>
+              <option value="CONSELHEIRO/A">CONSELHEIRO/A</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancelar
+          </button>
+          <button type="submit" name="commit" class="btn btn-primary btn-default pull-left">
+            <span class="glyphicon glyphicon-remove"></span> Salvar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>
+
 
 
 

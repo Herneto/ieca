@@ -95,9 +95,10 @@
 
           <div class="form-group">
             <label>É Casado?</label>
-            <%= form.check_box :casado, id: :membro_casado, :"data-toggle" => "collapse", :"data-target" => "#demo" %>
+            <input name="membro[casado]" type="hidden" value="0">
+            <input id="membro_casado" data-toggle="collapse" data-target="#demo<%= membro.id %>" type="checkbox" value="1"  <% if @membro.casado? %> checked="checked" <% end%> name="membro[casado]" class="collapsed">
 
-            <div id="demo" class="collapse">
+            <div id="demo<%= membro.id %>" class="collapse <% if @membro.casado? %> in <% end%>">
                 <label>Data de Casamento</label>
                 <%= form.date_select :data_casamento, id: :membro_data_casamento, class: "form-control input-lg" %>
             </div>

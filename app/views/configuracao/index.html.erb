@@ -1,5 +1,5 @@
 <div class="jumbotron text-center ">
-  <h1>Configurações - Altera suas preferências</h1>
+  <h1>Configurações - Altere suas preferências</h1>
   <p>Igreja Evangélica Congregacional em Angola - I.E.C.A</p>
   <p>Congregação de Caná</p>
   <%= @bcrypt %>
@@ -9,7 +9,7 @@
 
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#home">Configurações de Acesso</a></li>
-      <% if current_usuario.nivel.to_s == "catequista" %>
+      <% if current_usuario.nivel.to_s == "catequista" ||  current_usuario.nivel.to_s == ""%>
         <li><a data-toggle="tab" href="#menu1">Usuários</a></li>
       <% end %>
       
@@ -19,7 +19,7 @@
         <p>Altera a sua senha e/ou endereço de email</p>
         <%= render 'mudar', usuario: @usuario %>
         </div>
-        <% if current_usuario.nivel.to_s == "catequista" %>
+        <% if current_usuario.nivel.to_s == "catequista" ||  current_usuario.nivel.to_s == ""%>
           <div id="menu1" class="tab-pane fade">
             <p>Adicione novos usuários, tesoureiros, secretários ou catequistas.</p>
             <%= render 'adicionar', usuario: @novo %>          

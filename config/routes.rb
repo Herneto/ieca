@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   resources :membros
   root 'membros#index'
   match 'inicio' => 'membros#index', via: 'get'
+  match 'estatisticas' => 'estatisticas#index', via: 'get'
   match 'configuracao' => 'configuracao#index', via: 'get'
   match 'configuracao/acesso' => 'configuracao#acesso', via: 'PATCH'
   match 'configuracao/adicionar' => 'configuracao#adicionar', via: 'post'
+  match 'mais/:id' => 'membros#mais', via: 'get'
   
 
   devise_scope :usuario do

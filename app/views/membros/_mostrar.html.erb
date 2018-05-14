@@ -4,7 +4,8 @@
     <%= @membro.nome %>
 </p>
 <p class="text-center" style="font-size: 18px; margin-top: 10px;">
-    <button class="btn" data-toggle="modal" data-target="#novo<%= @membro.id %>">Editar</button> 
+    <button class="btn btn-warning" data-toggle="modal" data-target="#novo<%= @membro.id %>">Editar</button>
+  <%= link_to 'Eliminar', @membro, method: :delete, data: { confirm: 'Estás seguro?' }, class: "btn btn-danger" %>
 </p>
 
 
@@ -27,11 +28,13 @@
           <li class="list-group-item"><strong>Naturalidade:</strong>     <%= @membro.naturalidade %></li>
           <li class="list-group-item"><strong>Província:</strong>       <%= @membro.provincia %></li>
           <li class="list-group-item"><strong>Nascimento:</strong>       <%=  @membro.nascimento.mday %>/<%=  @membro.nascimento.mon %>/<%= @membro.nascimento.year %></li>
-          <li class="list-group-item"> <strong>Sexo:</strong>       <%= @membro.sexo %></li>
+          <li class="list-group-item"> <strong>Gênero:</strong> <% if @membro.sexo %> Homem <% else %> Mulher<% end %></li>
           <li class="list-group-item"><strong>Estado Civil:</strong>         <%= @membro.estado_civil %></li>
           <li class="list-group-item"><strong>Peso:</strong>    <%= @membro.peso %></li>
           <li class="list-group-item"><strong>Altura:</strong>     <%= @membro.altura %></li>
-          <li class="list-group-item"><strong>Data do Casamento:</strong>        <%= @membro.data_casamento.mday %>/<%= @membro.data_casamento.mon %>/<%= @membro.data_casamento.year %></li>
+            <% if @membro.casado? %>
+              <li class="list-group-item"><strong>Data do Casamento:</strong><%= @membro.data_casamento.mday %>/<%= @membro.data_casamento.mon %>/<%= @membro.data_casamento.year %></li>
+            <% end %>
           <li class="list-group-item"> <strong>Agregado Familiar:</strong>      <%= @membro.agregado %></li>
       </ul> 
 

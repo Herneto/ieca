@@ -1,0 +1,10 @@
+$('.corpo').empty();
+
+<% @membros.each do |membros| %>
+    $('.corpo').append('<%= j render membros %>');
+    $('.corpo').append('<%= j render 'membros/formm', membro: membros %>');
+<% end %>
+
+<% if @membros.empty? %>
+  $('.corpo').append('<%= j render 'membros/vazio'%>');
+<% end %>

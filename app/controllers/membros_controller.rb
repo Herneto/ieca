@@ -6,8 +6,26 @@ class MembrosController < ApplicationController
   # GET /membros
   # GET /membros.json
   def index
-    @membros = Membro.limit(50)
-    @membro = Membro.new
+    if params[:search]
+      respond_to do |format|
+        @membros = Membro.where(["nome like ?", "%#{params[:search]}%"])
+        @quantidade = Membro.count
+        @membro = Membro.new
+        format.html
+        format.js
+      end
+    else
+      @membros = Membro.limit(2)
+      @quantidade = Membro.count
+      @membro = Membro.new
+    end
+
+  end
+
+  def mais
+    respond_to do |format|
+      format.js
+    end
   end
 
   # GET /membros/1
@@ -67,8 +85,8 @@ class MembrosController < ApplicationController
   # DELETE /membros/1
   # DELETE /membros/1.json
   def destroy
-    @membro.apagado = "t"
-    @membro.save
+    #@membro.apagado = "t"
+    @membro.destroy
     respond_to do |format|
       format.html { redirect_to membros_url, notice: 'Membro was successfully destroyed.' }
       format.json { head :no_content }

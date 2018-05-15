@@ -15,7 +15,7 @@ class MembrosController < ApplicationController
         format.js
       end
     else
-      @membros = Membro.limit(2)
+      @membros = Membro.limit(20)
       @quantidade = Membro.count
       @membro = Membro.new
     end

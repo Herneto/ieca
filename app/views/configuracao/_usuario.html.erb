@@ -1,0 +1,10 @@
+<% if !(usuario.id == current_usuario.id) %>
+<tr class="<%= usuario.id %>">
+  <td><%= usuario.email %></td>
+  <td><%= usuario.nivel %></td>
+  <td><%= usuario.created_at %></td>
+      <td class="text-center">
+        <a class="btn btn-danger" rel="nofollow" data-method="delete" href="/eliminar/<%= usuario.id %>" data-remote="true">Eliminar</a>
+      </td>
+</tr>
+<% end %>

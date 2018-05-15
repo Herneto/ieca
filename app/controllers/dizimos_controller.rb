@@ -74,6 +74,6 @@ class DizimosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dizimo_params
-      params.require(:dizimo).permit(:ano, :jan, :fev, :mar, :abr, :mai, :jun, :jul, :ago, :set, :out, :nov, :des, :membro_id)
+      params.require(:dizimo).permit(:ano, :jan, :fev, :mar, :abr, :mai, :jun, :jul, :ago, :set, :out, :nov, :des, :membro_id, :janv, :fevv, :marv, :abrv, :maiv, :junv, :julv, :agov, :setv, :outv, :novv, :desv)
     end
 end

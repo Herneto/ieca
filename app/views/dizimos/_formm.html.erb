@@ -8,62 +8,170 @@
 
         <div class="field checkbox">
           <%= form.label :jan, "Janeiro" %>
-          <%= form.check_box :jan, id: :dizimo_jan %>
+          <input name="dizimo[jan]" type="hidden" value="0">
+          <input id="dizimo_jan" data-toggle="collapse" data-target="#jan<%= dizimo.id %>" type="checkbox" value="1" <% if dizimo.jan? %> checked="checked" <% end %> name="dizimo[jan]" class="collapsed">
+
+          <div id="jan<%= dizimo.id %>" class="collapse
+            <% if dizimo.jan? %> in
+            <% end %>">
+            <%= form.text_field :janv, id: :dizimo_janvv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
+
+
         </div>
 
         <div class="field checkbox">
           <%= form.label :fev, "Fevereiro" %>
-          <%= form.check_box :fev, id: :dizimo_fev %>
+          <input name="dizimo[fev]" type="hidden" value="0">
+          <input id="dizimo_fev" data-toggle="collapse" data-target="#fev<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.fev? %> checked="checked"
+                 <% end %> name="dizimo[fev]" class="collapsed">
+
+          <div id="fev<%= dizimo.id %>" class="collapse
+                      <% if dizimo.fev? %> in
+                      <% end %>">
+            <%= form.text_field :fevv, id: :dizimo_fevv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :mar, "Março" %>
-          <%= form.check_box :mar, id: :dizimo_mar %>
+          <input name="dizimo[mar]" type="hidden" value="0">
+          <input id="dizimo_mar" data-toggle="collapse" data-target="#mar<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.mar? %> checked="checked"
+                 <% end %> name="dizimo[mar]" class="collapsed">
+
+          <div id="mar<%= dizimo.id %>" class="collapse
+                                <% if dizimo.mar? %> in
+                                <% end %>">
+            <%= form.text_field :marv, id: :dizimo_marv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :abr, "Abril" %>
-          <%= form.check_box :abr, id: :dizimo_abr %>
+          <input name="dizimo[abr]" type="hidden" value="0">
+          <input id="dizimo_abr" data-toggle="collapse" data-target="#abr<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.abr? %> checked="checked"
+                 <% end %> name="dizimo[abr]" class="collapsed">
+
+          <div id="abr<%= dizimo.id %>" class="collapse
+                                          <% if dizimo.abr? %> in
+                                          <% end %>">
+            <%= form.text_field :abrv, id: :dizimo_abrv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :mai, "Maio" %>
-          <%= form.check_box :mai, id: :dizimo_mai %>
+          <input name="dizimo[mai]" type="hidden" value="0">
+          <input id="dizimo_mai" data-toggle="collapse" data-target="#mai<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.mai? %> checked="checked"
+                 <% end %> name="dizimo[mai]" class="collapsed">
+
+          <div id="mai<%= dizimo.id %>" class="collapse
+                                                    <% if dizimo.mai? %> in
+                                                    <% end %>">
+            <%= form.text_field :maiv, id: :dizimo_maiv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :jun, "Junho" %>
-          <%= form.check_box :jun, id: :dizimo_jun %>
+          <input name="dizimo[jun]" type="hidden" value="0">
+          <input id="dizimo_jun" data-toggle="collapse" data-target="#jun<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.jun? %> checked="checked"
+                 <% end %> name="dizimo[jun]" class="collapsed">
+
+          <div id="jun<%= dizimo.id %>" class="collapse
+                                                              <% if dizimo.jun? %> in
+                                                              <% end %>">
+            <%= form.text_field :junv, id: :dizimo_junv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :jul, "Julho" %>
-          <%= form.check_box :jul, id: :dizimo_jul %>
+          <input name="dizimo[jul]" type="hidden" value="0">
+          <input id="dizimo_jul" data-toggle="collapse" data-target="#jul<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.jul? %> checked="checked"
+                 <% end %> name="dizimo[jul]" class="collapsed">
+
+          <div id="jul<%= dizimo.id %>" class="collapse
+                                                                        <% if dizimo.jul? %> in
+                                                                        <% end %>">
+            <%= form.text_field :julv, id: :dizimo_julv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :ago, "Agosto" %>
-          <%= form.check_box :ago, id: :dizimo_ago %>
+          <input name="dizimo[ago]" type="hidden" value="0">
+          <input id="dizimo_ago" data-toggle="collapse" data-target="#ago<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.ago? %> checked="checked"
+                 <% end %> name="dizimo[ago]" class="collapsed">
+
+          <div id="ago<%= dizimo.id %>" class="collapse
+                                                                                  <% if dizimo.ago? %> in
+                                                                                  <% end %>">
+            <%= form.text_field :agov, id: :dizimo_agov, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :set, "Setembro" %>
-          <%= form.check_box :set, id: :dizimo_set %>
+          <input name="dizimo[set]" type="hidden" value="0">
+          <input id="dizimo_set" data-toggle="collapse" data-target="#set<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.set? %> checked="checked"
+                 <% end %> name="dizimo[set]" class="collapsed">
+
+          <div id="set<%= dizimo.id %>" class="collapse
+                                                                                            <% if dizimo.set? %> in
+                                                                                            <% end %>">
+            <%= form.text_field :setv, id: :dizimo_setv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :out, "Outubro" %>
-          <%= form.check_box :out, id: :dizimo_out %>
+          <input name="dizimo[out]" type="hidden" value="0">
+          <input id="dizimo_out" data-toggle="collapse" data-target="#out<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.out? %> checked="checked"
+                 <% end %> name="dizimo[out]" class="collapsed">
+
+          <div id="out<%= dizimo.id %>" class="collapse
+                                                                                                      <% if dizimo.out? %> in
+                                                                                                      <% end %>">
+            <%= form.text_field :outv, id: :dizimo_outv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :nov, "Novembro" %>
-          <%= form.check_box :nov, id: :dizimo_nov %>
+          <input name="dizimo[nov]" type="hidden" value="0">
+          <input id="dizimo_nov" data-toggle="collapse" data-target="#nov<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.nov? %> checked="checked"
+                 <% end %> name="dizimo[nov]" class="collapsed">
+
+          <div id="nov<%= dizimo.id %>" class="collapse
+                                                                                                                <% if dizimo.nov? %> in
+                                                                                                                <% end %>">
+            <%= form.text_field :novv, id: :dizimo_novv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field checkbox">
           <%= form.label :des, "Dezembro" %>
-          <%= form.check_box :des, id: :dizimo_des %>
+          <input name="dizimo[des]" type="hidden" value="0">
+          <input id="dizimo_des" data-toggle="collapse" data-target="#des<%= dizimo.id %>" type="checkbox" value="1"
+                 <% if dizimo.des? %> checked="checked"
+                 <% end %> name="dizimo[des]" class="collapsed">
+
+          <div id="des<%= dizimo.id %>" class="collapse
+                                                                                                                          <% if dizimo.des? %> in
+                                                                                                                          <% end %>">
+            <%= form.text_field :desv, id: :dizimo_desv, class: "form-control", :placeholder => "Valor..." %>
+          </div>
         </div>
 
         <div class="field hidden">

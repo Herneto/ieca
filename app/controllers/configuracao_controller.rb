@@ -6,6 +6,7 @@ class ConfiguracaoController < ApplicationController
     def index
       @usuario = current_usuario 
       @novo = Usuario.new
+      @usuarios = Usuario.all;
     end
 
     def acesso
@@ -19,12 +20,22 @@ class ConfiguracaoController < ApplicationController
     end
 
     def adicionar
-      @novo = Usuario.new(adicionar_params)
-     
-        if @novo.save
-          redirect_to "/configuracao"
+       @usuario = Usuario.new(adicionar_params)
+        if @usuario.save
+          respond_to do |format|
+            format.js
+          end
         end
-     
+    end
+
+    def eliminar
+        if params[:id]
+          respond_to do |format|
+            @id = params[:id].to_s
+            Usuario.find(params[:id]).destroy
+            format.js
+          end
+        end
     end
 
     private

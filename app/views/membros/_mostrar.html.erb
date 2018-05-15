@@ -3,10 +3,13 @@
 <p class="text-center" style="font-size: 24px; margin-top: 10px;">
     <%= @membro.nome %>
 </p>
-<p class="text-center" style="font-size: 18px; margin-top: 10px;">
+
+  <% if current_usuario.nivel != "tesoureiro" %>
+      <p class="text-center" style="font-size: 18px; margin-top: 10px;">
     <button class="btn btn-warning" data-toggle="modal" data-target="#novo<%= @membro.id %>">Editar</button>
   <%= link_to 'Eliminar', @membro, method: :delete, data: { confirm: 'Estás seguro?' }, class: "btn btn-danger" %>
 </p>
+  <% end %>
 
 
 <div class="panel-group" id="accordion">
@@ -59,11 +62,12 @@
           </ul> 
     </div>
   </div>
-  <div class="panel panel-default">
+  <% if current_usuario.nivel != "secretario"  %>
+    <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-        Dízimos</a>
+        Dízimos e Outras Contribuições</a>
       </h4>
     </div>
     <div id="collapse3" class="panel-collapse collapse">
@@ -73,6 +77,7 @@
         <button class="btn" data-toggle="modal" data-target="#mais">Adicionar Ano</button>        
     </div>
   </div>
+  <% end %>
 </div>
 
 <!-- Modal -->
@@ -82,7 +87,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h4 class="modal-title">Adicionar Ano de Registro de Dízimos</h4>
       </div>
       <%= render 'dizimos/formmm', dizimo: @dizimo %>
     </div>

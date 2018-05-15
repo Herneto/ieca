@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   match 'configuracao/acesso' => 'configuracao#acesso', via: 'PATCH'
   match 'configuracao/adicionar' => 'configuracao#adicionar', via: 'post'
   match 'mais/:id' => 'membros#mais', via: 'get'
+  match 'eliminar/:id' => 'configuracao#eliminar', via: 'DELETE'
   
 
   devise_scope :usuario do

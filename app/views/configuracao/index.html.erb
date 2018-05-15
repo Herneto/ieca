@@ -10,7 +10,8 @@
     <ul class="nav nav-tabs">
       <li class="active"><a data-toggle="tab" href="#home">Configurações de Acesso</a></li>
       <% if current_usuario.nivel.to_s == "catequista" ||  current_usuario.nivel.to_s == ""%>
-        <li><a data-toggle="tab" href="#menu1">Usuários</a></li>
+        <li><a data-toggle="tab" href="#menu1">Adicionar Usuários</a></li>
+        <li><a data-toggle="tab" href="#menu2">Usuários Cadastrados</a></li>
       <% end %>
       
     </ul>    
@@ -24,6 +25,10 @@
             <p>Adicione novos usuários, tesoureiros, secretários ou catequistas.</p>
             <%= render 'adicionar', usuario: @novo %>          
           </div>
+          <div id="menu2" class="tab-pane fade">
+          <p>Visualize os usuários com acesso ao sistema.</p>
+          <%= render 'gerir', usuario: @novo %>
+         </div>
         <% end %>
         
     </div>  

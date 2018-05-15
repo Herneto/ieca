@@ -5,10 +5,12 @@
 </div>
 
 <div class="main container">
- 
+
+  <% if current_usuario.nivel != "tesoureiro" %>
   <div class="row text-center"> 
   <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#novo">Adicionar Membro</button>   
   </div>
+    <% end %>
   <p>Procure membros pelo nome, cargo, província, etc</p>
   <%= form_tag membros_path, :method => 'get', remote: true, :class => "form-inline" do %>
     <div class="form-group col-sm-10" style="padding: 0px;">

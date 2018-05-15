@@ -2,21 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2559939b-0016-40c6-ac3c-197fd898906f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/controllers/estatisticas_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/estatisticas/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/membros/_vazio.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/membros/index.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/membros/mais.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ieca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ieca.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/configuracao/_gerir.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/configuracao/_usuario.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/configuracao/adicionar.js.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/configuracao/eliminar.js.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/membros.coffee" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/membros.coffee" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/membros_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/membros_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/configuracao_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/configuracao_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/dizimos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dizimos_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/configuracao/_adicionar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/configuracao/_adicionar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/configuracao/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/configuracao/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/membros/_formm.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/_formm.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dizimos/_formm.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dizimos/_formm.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/membros/_membro.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/_membro.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/membros/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -58,20 +58,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="estatisticas_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/estatisticas_controller.rb">
+      <file leaf-file-name="_membro.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/membros/_membro.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state relative-caret-position="221">
+              <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="membros_controller.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/membros_controller.rb">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/membros/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <state relative-caret-position="34">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/membros/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_mostrar.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/membros/_mostrar.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -100,25 +118,34 @@
         <option value="$PROJECT_DIR$/app/views/membros/update.js.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20180510030744_add_sociedade_to_membros.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180507184102_add_nivel_acesso.rb" />
-        <option value="$PROJECT_DIR$/app/views/membros/_membro.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20180510033955_add_bi_to_membros.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20180510034937_add_casado_to_membros.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/models/membro.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/membros/mais.js.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/membros.coffee" />
         <option value="$PROJECT_DIR$/app/views/membros/index.js.erb" />
         <option value="$PROJECT_DIR$/app/views/membros/_vazio.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/membros_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/configuracao/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/membros/_formm.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/membros/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/estatisticas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/estatisticas/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/configuracao/eliminar.js.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/configuracao_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/configuracao/_gerir.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/configuracao/_adicionar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/configuracao/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/configuracao/_usuario.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/configuracao/adicionar.js.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20180515100416_add_vals_to_dizimos.rb" />
+        <option value="$PROJECT_DIR$/app/views/dizimos/_formm.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/dizimos_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/membros/_membro.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/membros/index.html.erb" />
       </list>
     </option>
   </component>
@@ -133,9 +160,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="490" />
-    <option name="width" value="876" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="683" />
+    <option name="width" value="683" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -162,30 +189,44 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ieca" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ieca" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ieca" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ieca" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dizimos" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
-    <property name="RunAnythingHistoryKey" value="rails s&#9;null&#9;null&#10;rake db:migrate&#9;null&#9;null&#10;rails g migration add_casado_to_membros&#9;null&#9;null&#10;rails g migration add_bi_to_membros&#9;null&#9;null&#10;db:migrate&#9;ACTION&#9;rake:db:migrate&#10; rails g migration add_sociedade_to_membros&#9;null&#9;null&#10;bundle&#9;null&#9;null" />
+    <property name="RunAnythingHistoryKey" value="rails s&#9;null&#9;null&#10;rake db:migrate&#9;null&#9;null&#10;rails g migration add_vals_to_dizimos&#9;null&#9;null&#10;rails g migration add_casado_to_membros&#9;null&#9;null&#10;rails g migration add_bi_to_membros&#9;null&#9;null&#10;db:migrate&#9;ACTION&#9;rake:db:migrate&#10; rails g migration add_sociedade_to_membros&#9;null&#9;null&#10;bundle&#9;null&#9;null" />
     <property name="SearchEverywhereHistoryKey" value=":html&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ipvitoria" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Sites\ieca\app\controllers" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Sites\ieca\app\views\configuracao" />
       <recent name="C:\Sites\ieca\app\views\membros" />
       <recent name="C:\Sites\ieca\app\controllers" />
       <recent name="C:\Sites\ieca\app\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Sites\ieca\app\controllers" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -194,6 +235,7 @@
       <command value="rails g migration add_sociedade_to_membros" />
       <command value="rails g migration add_bi_to_membros" />
       <command value="rails g migration add_casado_to_membros" />
+      <command value="rails g migration add_vals_to_dizimos" />
       <command value="rake db:migrate" />
       <command value="rails s" />
     </option>
@@ -254,12 +296,14 @@
       <workItem from="1525993581842" duration="4609000" />
       <workItem from="1526100624342" duration="124000" />
       <workItem from="1526236537935" duration="24927000" />
-      <workItem from="1526313226722" duration="844000" />
+      <workItem from="1526313226722" duration="2065000" />
+      <workItem from="1526338371632" duration="16566000" />
+      <workItem from="1526382816858" duration="2935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41086000" />
+    <option name="totallyTimeSpent" value="61808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -271,18 +315,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="683" y="0" width="683" height="728" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.33509833" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32711864" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50226927" side_tool="true" weight="0.4240924" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32838285" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.43559322" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.73354733" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5014641" side_tool="true" weight="0.32838285" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49853587" weight="0.4240924" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.24659607" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32838285" />
       <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.24659607" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -291,21 +336,53 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/membros/_formm.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="94" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/estatisticas_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -383,31 +460,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/configuracao_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180422202541_create_membros.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180423075514_create_dizimos.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="50" lean-forward="true" selection-start-column="50" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -446,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/membros/mais.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -460,80 +509,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/configuracao/_mudar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="61" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/configuracao/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/update.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/index.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/membros/_vazio.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/_formm.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/_membro.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="61" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20180510034937_add_casado_to_membros.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/_mostrar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
         </state>
       </provider>
     </entry>
@@ -568,10 +547,186 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/devise.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/index.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" lean-forward="true" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/membros_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/update.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/_gerir.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/configuracao_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/_mudar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/eliminar.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/_adicionar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/_usuario.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/configuracao/adicionar.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="17" column="219" selection-start-line="17" selection-start-column="219" selection-end-line="17" selection-end-column="219" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180422202541_create_membros.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180510034937_add_casado_to_membros.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180423075514_create_dizimos.rb">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <caret line="15" column="20" selection-start-line="4" selection-start-column="17" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dizimos/_dizimo.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="51" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dizimos/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/_formm.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="94" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/dizimos_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="13" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20180515100416_add_vals_to_dizimos.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dizimos/_formm.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dizimos/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/_mostrar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/_membro.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>

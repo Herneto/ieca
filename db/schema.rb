@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180510034937) do
+ActiveRecord::Schema.define(version: 20180515100416) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,18 @@ ActiveRecord::Schema.define(version: 20180510034937) do
     t.bigint "membro_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "janv"
+    t.string "fevv"
+    t.string "marv"
+    t.string "abrv"
+    t.string "maiv"
+    t.string "junv"
+    t.string "julv"
+    t.string "agov"
+    t.string "setv"
+    t.string "outv"
+    t.string "novv"
+    t.string "desv"
     t.index ["membro_id"], name: "index_dizimos_on_membro_id"
   end
 

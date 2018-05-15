@@ -1,14 +1,20 @@
-<tr>
-    <td><%= membro.nome %></td>
+  <tr class="<%= membro.id %>">
+    <td><%= membro.nome[0..1] %></td>
     <td><%= membro.provincia %></td>
     <td><%= membro.nascimento.mday %>/<%= membro.nascimento.mon %>/<%= membro.nascimento.year %></td>
-    <td><% if membro.sexo %> Homem <% else %> Mulher<% end %></td>
+    <td>
+      <% if membro.sexo %> Homem
+      <% else %> Mulher
+      <% end %></td>
     <td><%= membro.estado_civil %></td>
     <td><%= membro.categoriareligiosa %></td>
     <td><%= membro.cargolideranca %></td>
     <td class="text-center">
-    <%= link_to 'Ver', membro, class: "btn btn-info"%> 
-    <button class="btn btn-warning" data-toggle="modal" data-target="#novo<%= membro.id %>">Editar</button>
-    <%= link_to 'Eliminar', membro, method: :delete, data: { confirm: 'Estás seguro?' }, class: "btn btn-danger" %>
+      <%= link_to 'Ver', membro, class: "btn btn-primary" %>
+      <% if current_usuario.nivel != "tesoureiro" %>
+      <button class="btn btn-warning" data-toggle="modal" data-target="#novo<%= membro.id %>">Editar</button>
+      <%= link_to 'Eliminar', membro, method: :delete, class: "btn btn-danger" %>
+        <% end %>
     </td>
-</tr>
+  </tr>
+

@@ -1,0 +1,20 @@
+<% if @usuario.save %>
+$("#usuario_email").val('');
+$("#usuario_password").val('');
+
+$(".alert").removeClass("alert-danger");
+$(".alert").addClass("alert-success");
+$(".alert").html("<a href=\"#\" data-dismiss=\"alert\"></a> <strong>Adicionado!</strong>Novo usuário adicionado com sucesso!");
+$(".alert").show(300);
+
+$(function () {
+    setTimeout(function () {
+        $(".alert").fadeOut('fast');
+    }, 3000);
+});
+<% else %>
+    $(".alert").removeClass("alert-success");
+    $(".alert").addClass("alert-danger");
+    $(".alert").html("<a href=\"#\" data-dismiss=\"alert\" ></a> <strong>Não Adicionado!</strong> Novo usuário não adicionado, verifique se o <strong>email</strong> está correto ou se já existe uma conta associada a ele. A <strong>password</strong> tem de ter mais de 6 caracteres.");
+    $(".alert").show(300);
+<% end %>

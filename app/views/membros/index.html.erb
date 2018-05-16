@@ -47,11 +47,9 @@
       </tbody>
     </table>
   </div>
-  <% if @quantidade > @membros.count %>
-      <div class="row text-center">
-        <a href="/mais/<%= @membros.count %>" class="show-more btn btn-primary" role="button" style="margin-top: 10px;" aria-pressed="true">Mostrar Mais ></a>
-      </div>
-  <% end %>
+  <div class="text-center"> 
+      <%= will_paginate @membros, renderer: BootstrapPagination::Rails, previous_label: "Anteriores", next_label: "Próximos", inner_window: 1, outer_window: 0%>  
+  </div>
 </div>
 
 <%= render 'membros/formm', membro: @membro %>

@@ -15,7 +15,7 @@ class MembrosController < ApplicationController
         format.js
       end
     else
-      @membros = Membro.limit(20)
+      @membros = Membro.paginate(:page => params[:page], :per_page => 15)
       @quantidade = Membro.count
       @membro = Membro.new
     end

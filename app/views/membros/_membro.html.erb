@@ -1,5 +1,5 @@
   <tr class="<%= membro.id %>">
-    <td><%= membro.nome[0..1] %></td>
+    <td><%= membro.nome.split(" ")[0] %></td>
     <td><%= membro.provincia %></td>
     <td><%= membro.nascimento.mday %>/<%= membro.nascimento.mon %>/<%= membro.nascimento.year %></td>
     <td>

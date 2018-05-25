@@ -8,7 +8,7 @@ class MembrosController < ApplicationController
   def index
     if params[:search]
       respond_to do |format|
-        @membros = Membro.where(["nome like ?", "%#{params[:search]}%"])
+        @membros = Membro.where(["nome like ?", "%#{params[:search]}%"]).paginate(:page => params[:page], :per_page => 15)
         @quantidade = Membro.count
         @membro = Membro.new
         format.html

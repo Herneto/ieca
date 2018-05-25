@@ -16,7 +16,7 @@ class MembrosController < ApplicationController
       end
     else
       @membros = Membro.paginate(:page => params[:page], :per_page => 15)
-      @quantidade = Membro.count
+      @quantidade = Cuia::Bla.ble(Membro) #Membro.count
       @membro = Membro.new
     end
 
@@ -101,6 +101,6 @@ class MembrosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def membro_params
-      params.require(:membro).permit(:nome, :pai, :mae, :residencia, :nacionalidade, :naturalidade, :provincia, :nascimento, :sexo, :estado_civil, :peso, :altura, :data_casamento, :agregado, :localbaptismo, :data_batismo, :localconfirmacao, :data_confirmacao, :categoriareligiosa, :cargolideranca, :sociedade, :bi, :casado)
+      params.require(:membro).permit(:nome, :pai, :mae, :residencia, :nacionalidade, :naturalidade, :provincia, :nascimento, :sexo, :estado_civil, :peso, :altura, :data_casamento, :agregado, :localbaptismo, :data_batismo, :localconfirmacao, :data_confirmacao, :categoriareligiosa, :cargolideranca, :sociedade, :bi, :casado, :batizado, :confirmacao, :cedula, :cartao_residente, :passaporte, :cartao_eleitoral)
     end
 end

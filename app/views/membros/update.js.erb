@@ -1,6 +1,6 @@
 $(".esconder").modal("hide")
 
-<% unless action_name == "index" %>
+<% if action_name == "update" %>
     $(".dados").hide('slow', function() {
         $(".dados").remove();
         $(".membro").append('<%= j render 'membros/mostrar' %> ');    

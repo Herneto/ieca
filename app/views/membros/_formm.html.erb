@@ -39,7 +39,27 @@
 
           <div class="form-group">
             <label>BI</label>
-            <%= form.text_field :bi, id: :bi, class: "form-control input-lg" %>
+            <%= form.text_field :bi, id: :bi, class: "form-control input-lg", placeholder: "Deixe vazia se não tiver..."%>
+          </div>
+
+          <div class="form-group">
+            <label>Cédula</label>
+            <%= form.text_field :cedula, id: :cedula, class: "form-control input-lg", placeholder: "Deixe vazia se não tiver..." %>
+          </div>
+
+          <div class="form-group">
+            <label>Passaporte</label>
+            <%= form.text_field :passaporte, id: :passaporte, class: "form-control input-lg", placeholder: "Deixe vazia se não tiver..." %>
+          </div>
+
+          <div class="form-group">
+            <label>Cartão Eleitoral</label>
+            <%= form.text_field :cartao_eleitoral, id: :cartao_eleitoral, class: "form-control input-lg", placeholder: "Deixe vazia se não tiver..." %>
+          </div>
+
+          <div class="form-group">
+            <label>Cartão de Residente</label>
+            <%= form.text_field :cartao_residente, id: :cartao_residente, class: "form-control input-lg" %>
           </div>
 
           <div class="form-group">
@@ -64,20 +84,23 @@
 
           <div class="form-group">
             <%= form.label :nascimento %>
-            <%= form.date_select :nascimento, id: :membro_nascimento, class: "form-control input-lg"%>
+            <%= form.date_field :nascimento, id: :membro_nascimento, class: "form-control input-lg", value: "2000-01-01"%>
           </div>
 
           <div class="form-group">
-            <label>Homem?</label>
-            <%= form.check_box :sexo, id: :membro_sexo %>
+            <label>Gênero</label>
+            <select id="membro_sexo" name="membro[sexo]" class="form-control">
+              <option value="t" <% if membro.sexo %> selected <% end%> >Homem</option>
+              <option value="f" <% if !membro.sexo %> selected <% end%> >Mulher</option>
+            </select>
           </div>
 
           <div class="form-group">
             <label>Estado Civil</label>
-            <select id="membro_estado_civil" name="membro[estado_civil]" class="form-control">
-              <option value="Casado/a">Casado/a</option>
-              <option value="Solteiro/a">Solteiro/a</option>
-              <option value="Viúva">Viúva</option>
+            <select id="membro_estado_civil" name="membro[estado_civil]" class="form-control" value="Solteiro/a">
+              <option value="Casado/a" <%=MembrosHelper.verificar(membro.estado_civil, "Casado/a")%>>Casado/a</option>
+              <option value="Solteiro/a" <%=MembrosHelper.verificar(membro.estado_civil, "Solteiro/a")%>>Solteiro/a</option>
+              <option value="Viúvo/a" <%=MembrosHelper.verificar(membro.estado_civil, "Viúva")%>>Viúva</option>
             </select>
           </div>
 
@@ -95,11 +118,11 @@
           <div class="form-group">
             <label>É Casado?</label>
             <input name="membro[casado]" type="hidden" value="0">
-            <input id="membro_casado" data-toggle="collapse" data-target="#demo<%= membro.id %>" type="checkbox" value="1"  <% if @membro.casado? %> checked="checked" <% end%> name="membro[casado]" class="collapsed">
+            <input id="membro_casado" data-toggle="collapse" data-target="#demo<%= membro.id %>" type="checkbox" value="1"  <% if membro.casado? %> checked="checked" <% end%> name="membro[casado]" class="collapsed">
 
-            <div id="demo<%= membro.id %>" class="collapse <% if @membro.casado? %> in <% end%>">
+            <div id="demo<%= membro.id %>" class="collapse <% if membro.casado? %> in <% end%>">
                 <label>Data de Casamento</label>
-                <%= form.date_select :data_casamento, id: :membro_data_casamento, class: "form-control input-lg" %>
+                <%= form.date_field :data_casamento, id: :membro_data_casamento, class: "form-control input-lg" %>
             </div>
           </div>
 
@@ -109,59 +132,77 @@
           </div>
 
           <div class="form-group">
-            <label>Local de Baptismo</label>
-            <%= form.text_field :localbaptismo, id: :membro_localbaptismo, class: "form-control input-lg" %>
+            <label>É Baptizado?</label>
+            <input name="membro[batizado]" type="hidden" value="0">
+            <input id="membro_batizado" data-toggle="collapse" data-target="#demos<%= membro.id %>" type="checkbox" value="1"  <% if membro.batizado? %> checked="checked" <% end%> name="membro[batizado]" class="collapsed">
+              
+              <div id="demos<%= membro.id %>" class="collapse <% if membro.batizado? %> in <% end%>">
+                <div class="form-group">
+                    <label>Local de Baptismo</label>
+                    <%= form.text_field :localbaptismo, id: :membro_localbaptismo, class: "form-control input-lg", placeholder: "Deixe vazia se não tiver..." %>
+                </div> 
+                <div class="form-group">  
+                    <label>Data de Baptismo</label>
+                    <%= form.date_field :data_batismo, id: :membro_data_batismo, class: "form-control input-lg", value: "2000-01-01" %>
+                </div>                
+              </div>
           </div>
 
           <div class="form-group">
-            <label>Data de Baptismo</label>
-            <%= form.date_select :data_batismo, id: :membro_data_batismo, class: "form-control input-lg" %>
+            <label>Confirmação?</label>
+            <input name="membro[confirmacao]" type="hidden" value="0">
+            <input id="membro_confirmacao" data-toggle="collapse" data-target="#dems<%= membro.id %>" type="checkbox" value="1"  <% if membro.confirmacao? %> checked="checked" <% end%> name="membro[confirmacao]" class="collapsed">
+              
+              <div id="dems<%= membro.id %>" class="collapse <% if membro.confirmacao? %> in <% end%>">
+                <div class="form-group">
+                  <label>Local da Confirmação</label>
+                  <%= form.text_field :localconfirmacao, id: :membro_localconfirmacao , class: "form-control input-lg", placeholder: "Deixe vazia se não tiver..." %>
+                </div>  
+                <div class="form-group">  
+                    <label>Data da Confirmação</label>
+                    <%= form.date_field :data_confirmacao, id: :membro_data_confirmacao, class: "form-control input-lg", value: "2000-01-01" %>
+                </div>         
+              </div>
           </div>
 
-          <div class="form-group">
-            <label>Local da Confirmação</label>
-            <%= form.text_field :localconfirmacao, id: :membro_localconfirmacao , class: "form-control input-lg"%>
-          </div>
 
-          <div class="form-group">
-            <label>Data da Confirmação</label>
-            <%= form.date_select :data_confirmacao, id: :membro_data_confirmacao, class: "form-control input-lg" %>
-          </div>
+
+
 
           <div class="form-group">
             <label>Categoria Religiosa</label>
             <select id="membro_categoriareligiosa" name="membro[categoriareligiosa]" class="form-control">
-              <option value="MEMBRO EM PLENA COMUNHÃO">MEMBRO EM PLENA COMUNHÃO</option>
-              <option value="MEMBRO CATECÚMENO">MEMBRO CATECÚMENO</option>
-              <option value="MEMBRO OUVINTE">MEMBRO OUVINTE</option>
-              <option value="MEMBRO SUSPENSO">MEMBRO SUSPENSO</option>
+              <option value="MEMBRO EM PLENA COMUNHÃO" <%= MembrosHelper.verificar(membro.categoriareligiosa, "MEMBRO EM PLENA COMUNHÃO")%> >MEMBRO EM PLENA COMUNHÃO</option>
+              <option value="MEMBRO CATECÚMENO" <%=MembrosHelper.verificar(membro.categoriareligiosa, "MEMBRO CATECÚMENO")%>>MEMBRO CATECÚMENO</option>
+              <option value="MEMBRO OUVINTE" <%=MembrosHelper.verificar(membro.categoriareligiosa, "MEMBRO OUVINTE")%>>MEMBRO OUVINTE</option>
+              <option value="MEMBRO SUSPENSO" <%=MembrosHelper.verificar(membro.categoriareligiosa, "MEMBRO SUSPENSO")%>>MEMBRO SUSPENSO</option>
             </select>
           </div>
 
           <div class="form-group">
             <%= form.label :sociedade %>
             <select id="membro_sociedade" name="membro[sociedade]" class="form-control">
-              <option value="Criança">Criança</option>
-              <option value="Jovens">Jovens</option>
-              <option value="Média">Média</option>
-              <option value="Homens">Homens</option>
-              <option value="Mulheres">Mulheres</option>
+              <option value="Criança" <%=MembrosHelper.verificar(membro.sociedade, "Criança")%>>Criança</option>
+              <option value="Jovens" <%=MembrosHelper.verificar(membro.sociedade, "Jovens")%>>Jovens</option>
+              <option value="Média" <%=MembrosHelper.verificar(membro.sociedade, "Criança")%>>Média</option>
+              <option value="Homens" <%=MembrosHelper.verificar(membro.sociedade, "Homens")%>>Homens</option>
+              <option value="Mulheres" <%=MembrosHelper.verificar(membro.sociedade, "Mulheres")%>>Mulheres</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>Cargo de Liderança</label>
             <select id="membro_cargolideranca" name="membro[cargolideranca]"class="form-control">
-            <option value="NENHUM">PASTOR/A</option>  
-            <option value="PASTOR/A">PASTOR/A</option>
-              <option value="DIÁCONO">DIÁCONO</option>
-              <option value="DIÁCONISA">DIÁCONISA</option>
-              <option value="EVANGELISTA">EVANGELISTA</option>
-              <option value="CATEQUISTA">CATEQUISTA</option>
-              <option value="DIRETOR/A">DIRETOR/A</option>
-              <option value="SECRETÁRIO/A">SECRETÁRIO/A</option>
-              <option value="TESOUREIRO/A">TESOUREIRO/A</option>
-              <option value="CONSELHEIRO/A">CONSELHEIRO/A</option>
+            <option value="MEMBRO" <%=MembrosHelper.verificar(membro.cargolideranca, "MEMBRO")%>>Membro</option>
+            <option value="PASTOR/A" <%=MembrosHelper.verificar(membro.cargolideranca, "PASTOR/A")%>>PASTOR/A</option>
+              <option value="DIÁCONO" <%=MembrosHelper.verificar(membro.cargolideranca, "DIÁCONO")%>>DIÁCONO</option>
+              <option value="DIÁCONISA" <%=MembrosHelper.verificar(membro.cargolideranca, "DIÁCONISA")%>>DIÁCONISA</option>
+              <option value="EVANGELISTA" <%=MembrosHelper.verificar(membro.cargolideranca, "EVANGELISTA")%>>EVANGELISTA</option>
+              <option value="CATEQUISTA" <%=MembrosHelper.verificar(membro.cargolideranca, "CATEQUISTA")%>>CATEQUISTA</option>
+              <option value="DIRETOR/A" <%=MembrosHelper.verificar(membro.cargolideranca, "DIRETOR/A")%>>DIRETOR/A</option>
+              <option value="SECRETÁRIO/A" <%=MembrosHelper.verificar(membro.cargolideranca, "SECRETÁRIO/A")%>>SECRETÁRIO/A</option>
+              <option value="TESOUREIRO/A" <%=MembrosHelper.verificar(membro.cargolideranca, "TESOUREIRO/A")%>>TESOUREIRO/A</option>
+              <option value="CONSELHEIRO/A" <%=MembrosHelper.verificar(membro.cargolideranca, "CONSELHEIRO/A")%>>CONSELHEIRO/A</option>
             </select>
           </div>
         </div>

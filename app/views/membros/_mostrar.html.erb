@@ -24,7 +24,15 @@
           <ul class="list-group">
           <li class="list-group-item"><strong>Pai:</strong><%= @membro.pai %></li>
           <li class="list-group-item"><strong>Mãe:</strong> <%= @membro.mae %></li>
-          <li class="list-group-item"><strong>BI:</strong> <%= @membro.bi %></li>
+          <li class="list-group-item"><strong>BI:</strong> <% if @membro.bi? %> <%= @membro.bi %> <%else%> Não Informado!<%end%></li>
+
+          <li class="list-group-item"><strong>Cédula:</strong> <% if @membro.cedula? %> <%= @membro.cedula %> <%else%> Não Informado!<%end%> </li>
+          <li class="list-group-item"><strong>Passaporte:</strong> <% if @membro.passaporte? %> <%= @membro.passaporte %> <%else%> Não Informado!<%end%></li>
+          <li class="list-group-item"><strong>Cartão de Eleitor:</strong> <% if @membro.cartao_eleitoral? %> <%= @membro.cartao_eleitoral %> <%else%> Não Informado!<%end%></li>
+          <li class="list-group-item"><strong>Cartão de Residente:</strong> <% if @membro.cartao_residente? %> <%= @membro.cartao_residente %> <%else%> Não Informado!<%end%></li>
+          
+          
+
 
           <li class="list-group-item"> <strong>Residencia:</strong>      <%= @membro.residencia %></li>
           <li class="list-group-item"> <strong>Nacionalidade:</strong>      <%= @membro.nacionalidade %></li>
@@ -52,10 +60,21 @@
     </div>
     <div id="collapse2" class="panel-collapse collapse">
           <ul class="list-group">
-              <li class="list-group-item"><strong>Local do Baptismo:</strong>      <%= @membro.localbaptismo %></li>
-              <li class="list-group-item"><strong>Data de Batismo:</strong>    <%= @membro.data_batismo.mday %>/<%= @membro.data_batismo.mon %>/<%= @membro.data_batismo.year %></li>
-              <li class="list-group-item"><strong>Local de Confirmação:</strong>    <%= @membro.localconfirmacao %></li>
-              <li class="list-group-item"><strong>Data Confirmação:</strong>      <%=  @membro.data_confirmacao.mday %>/<%=  @membro.data_confirmacao.mon %>/<%=  @membro.data_confirmacao.year %></li>
+          <% if @membro.batizado?%>
+            <li class="list-group-item"><strong>Local do Baptismo:</strong>      <% if @membro.localbaptismo? %> <%= @membro.localbaptismo %> <% else %> Local de Baptismo não cadastrado!<% end %></li>
+            <li class="list-group-item"><strong>Data de Batismo:</strong>    <%= @membro.data_batismo.mday %>/<%= @membro.data_batismo.mon %>/<%= @membro.data_batismo.year %></li>
+          <% else %>
+            <li class="list-group-item"><strong>Batismo:</strong>Membro não baptizado</li>
+          <% end %>
+
+          <% if @membro.confirmacao? %>
+            <li class="list-group-item"><strong>Local de Confirmação:</strong>  <% if @membro.localconfirmacao? %> <%= @membro.localconfirmacao %> <% else %> Local de Confirmação não cadastrado!<% end %></li>
+            <li class="list-group-item"><strong>Data Confirmação:</strong>      <%=  @membro.data_confirmacao.mday %>/<%=  @membro.data_confirmacao.mon %>/<%=  @membro.data_confirmacao.year %></li>
+          <% else %>
+            <li class="list-group-item"><strong>Confirmação:</strong>Informações de confirmação não cadatradas!</li>
+          <% end %>
+
+
               <li class="list-group-item"><strong>Categoria Religiosa:</strong>      <%= @membro.categoriareligiosa %></li>
               <li class="list-group-item"><strong>Cargo de Liderança:</strong>   <%= @membro.cargolideranca %></li>
             <li class="list-group-item"><strong>Sociedade:</strong>   <%= @membro.sociedade %></li>

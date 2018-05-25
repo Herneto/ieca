@@ -68,6 +68,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    cuia (0.1.2)
     devise (4.4.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -204,6 +205,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  cuia (~> 0.1.2)
   devise (~> 4.4, >= 4.4.3)
   jbuilder (~> 2.5)
   jquery-rails

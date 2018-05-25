@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2559939b-0016-40c6-ac3c-197fd898906f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/configuracao/_gerir.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/configuracao/_usuario.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/configuracao/adicionar.js.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/configuracao/eliminar.js.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/configuracao_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/configuracao_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/dizimos_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/dizimos_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/configuracao/_adicionar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/configuracao/_adicionar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/configuracao/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/configuracao/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dizimos/_formm.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dizimos/_formm.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/membros/_membro.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/_membro.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/membros/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ieca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ieca.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/membros/_formm.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/membros/_formm.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -62,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/membros/_membro.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="52" />
+              <caret line="13" column="52" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -76,11 +65,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/membros/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="55" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="374">
+              <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_formm.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/membros/_formm.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="179" column="10" lean-forward="true" selection-start-line="179" selection-start-column="10" selection-end-line="179" selection-end-column="10" />
+              <folding>
+                <element signature="n#div#20;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#21;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#22;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,7 +133,6 @@
         <option value="$PROJECT_DIR$/app/views/membros/index.js.erb" />
         <option value="$PROJECT_DIR$/app/views/membros/_vazio.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/membros_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/membros/_formm.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/estatisticas_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/estatisticas/index.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -146,6 +149,7 @@
         <option value="$PROJECT_DIR$/app/views/membros/_mostrar.html.erb" />
         <option value="$PROJECT_DIR$/app/views/membros/_membro.html.erb" />
         <option value="$PROJECT_DIR$/app/views/membros/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/membros/_formm.html.erb" />
       </list>
     </option>
   </component>
@@ -160,7 +164,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -171,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,14 +205,13 @@
               <item name="ieca" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="dizimos" type="462c0819:PsiDirectoryNode" />
+              <item name="membros" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -299,11 +303,12 @@
       <workItem from="1526313226722" duration="2065000" />
       <workItem from="1526338371632" duration="16566000" />
       <workItem from="1526382816858" duration="2935000" />
+      <workItem from="1526540020980" duration="1578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61808000" />
+    <option name="totallyTimeSpent" value="63386000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,19 +320,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.20347957" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32711864" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50226927" side_tool="true" weight="0.4240924" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32838285" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.43559322" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.73354733" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.4339934" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.24659607" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
       <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.24659607" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -336,6 +341,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -669,13 +675,6 @@
         <state relative-caret-position="-357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/membros/_formm.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="94" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/dizimos_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
@@ -719,14 +718,27 @@
     <entry file="file://$PROJECT_DIR$/app/views/membros/_membro.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="52" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="52" />
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/membros/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="374">
+          <caret line="54" column="21" lean-forward="true" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/membros/_formm.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="179" column="10" lean-forward="true" selection-start-line="179" selection-start-column="10" selection-end-line="179" selection-end-column="10" />
+          <folding>
+            <element signature="n#div#20;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#21;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#22;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>

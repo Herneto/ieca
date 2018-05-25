@@ -21,7 +21,6 @@ gem 'uglifier', '>= 1.3.0'
 #gem 'whenever', require: false
 
 gem 'pg'
-gem 'cuia', '~> 0.1.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 

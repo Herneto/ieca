@@ -16,7 +16,7 @@ class MembrosController < ApplicationController
       end
     else
       @membros = Membro.paginate(:page => params[:page], :per_page => 15)
-      @quantidade = Cuia::Bla.ble(Membro) #Membro.count
+      @quantidade = Membro.count
       @membro = Membro.new
     end
 
